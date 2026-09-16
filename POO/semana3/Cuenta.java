@@ -21,6 +21,12 @@ public class Cuenta {
     return "Cuenta [ cedula:" + cedula + " nombre: " + nombre + " numerocuenta: " + numeroCuenta + 
                      " tipoCuenta: " + tipoCuenta + " saldo: " + saldo + "]";
   }
-  
+//Creación del método recargar
+  public void recargarCuenta(double cantidad){
+    saldo += cantidad;
+  }
+
+  public void retirarCuenta(double cantidad){
+    saldo -= cantidad;
+  }
 }
-  
