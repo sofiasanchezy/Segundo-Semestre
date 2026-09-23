@@ -29,4 +29,17 @@ public class Cuenta {
   public void retirarCuenta(double cantidad){
     saldo -= cantidad;
   }
+  //retirar
+  public boolean retirarCuentaSegura(double cantidad){
+    if (cantidad <= 0) {
+      System.out.println("La cantidad a retirar debe ser mayor que cero.");
+      return false;
+    }
+    if (cantidad > saldo) {
+      System.out.println("Saldo insuficiente para realizar el retiro, saldo actual: " + saldo);
+      return false;
+    }
+    saldo -= cantidad;
+    return true;
+  }
 }
