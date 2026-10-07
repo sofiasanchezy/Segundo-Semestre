@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Main {
+public class MainArreglo {
     public static void main(String[] args) throws Exception {
         
         // Código principal

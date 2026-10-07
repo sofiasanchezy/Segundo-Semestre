@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Reserva {
 
     // atributos (cliente y habitacion son objetos de las otras clases)
@@ -68,7 +70,11 @@ public class Reserva {
 
     // metodos de comportamiento
     public void confirmar() {
-        if (!cliente.esMayorDeEdad()) {
+        if (cliente == null) {
+            System.out.println("Reserva " + codigo + " rechazada: cliente no definido.");
+        } else if (habitacion == null) {
+            System.out.println("Reserva " + codigo + " rechazada: habitacion no definida.");
+        } else if (!cliente.esMayorDeEdad()) {
             System.out.println("Reserva " + codigo + " rechazada: el cliente es menor de edad.");
         } else if (!habitacion.estaDisponible()) {
             System.out.println("Reserva " + codigo + " rechazada: la habitacion no esta disponible.");
